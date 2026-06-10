@@ -145,7 +145,6 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
     min-height: 42px;
     background-color: var(--color-pink);
     color: var(--color-white);
