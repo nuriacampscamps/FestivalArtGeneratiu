@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Obra | Canvas & Code</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="../JS/menu.js" defer></script>
+</head>
+
+<body>
+
+     <header class="header">
+
+        <div class="topbar">
+            <a href="../index.html">
+                <img src="../assets/img/logo.png" alt="Logo Canvas&Code" class="logo">
+            </a>
+
+            <button class="menuBoto" aria-label="Obrir menu" aria-expanded="false">
+                  <img src="../assets/img/MenuHamburguesa.png" alt="" class="menu-icon"></button>
+        
+
+        <nav class="nav" aria-label="Navegació principal">
+
+            <ul>
+                <li><a href="../index.html">Inici</a></li>
+                <li><a href="sobrenosaltres.html">Sobre nosaltres</a></li>
+                <li><a href="laboratoriemocions.html">Laboratori emocions</a></li>
+                <li><a href="obra.html">Obra</a></li>
+                <li><a href="comunitat.html">Comunitat</a></li>
+            </ul>
+        </nav>
+</div>
+    </header>
+
+    <main>
+
+        <section class="capçalera">
+            <buton class="fletxa fletxa-esquerra" type="button" aria-label="Imatge anterior">
+                <img src="../assets/img/Fletxa2.png" alt="Fletxa esquerra per passar">
+            </buton>
+            <div>
+                <h1>Laboratori d'emocions</h1>
+                </div>
+                <buton class="fletxa fletxa-dreta" type="button" aria-label="Imatge següent">
+                <img src="../assets/img/Fletxa1.png" alt="Fletxa dreta per passar">
+            </buton>
+        </section>
+
+        <section class="section sectionObra">
+            <h2>Flux emocional</h2>
+            <p class="introFestival">Una obra generativa que transforma sentiments en formes i moviments dinàmics. Mitjançant  paràmetres interactius, el sistema es desenvolupa de manera constant, generant composicions visuals que mostren la tensió, la calma o l’eufòria en temps real.</p>
+            <img id="TamanyImatgeFlux" src="../assets/img/FluxEmocional.png" alt="xxx"> 
+        </section>
+
+        <section class="sectionMissio">
+            <h2>Paràmetres visuals</h2>
+            <div class="controladors">
+            <div class="GrupControl">
+                <label for="intensitat">Intensitat</label>
+                <input type="range" id="intensitat" min="0" max="100" value="50">
+            </div>
+
+            <div class="GrupControl">
+                <label for="velocitat">Velocitat</label>
+                <input type="range" id="velocitat" min="0" max="100" value="50">
+            </div>
+
+            <div class="GrupControl">
+                <label for="contrast">Contrast</label>
+                <input type="range" id="contrast" min="0" max="100" value="50">
+            </div>
+
+             <div class="GrupControl">
+                <label for="contrast">Soroll</label>
+                <input type="range" id="soroll" min="0" max="100" value="50">
+            </div>
+</div>
+            <h2>Mode de color</h2>
+
+            <div class="ColorBotonsDos">
+                <button type="button" class="boto modeBoto" data-mode="mono">Monocrom</button>
+                <button type="button" class="boto modeBoto" data-mode="gradient">Gradient</button>
+                <button type="button" class="boto modeBoto" data-mode="neo">Neó</button>
+            </div>
+
+            <h2>Modifica mitjançant codi</h2>
+
+            <form class="FormulariCodi">
+                <textarea id="code-editor" name="code-editor" placeholder="Escriu el teu codi"></textarea>
+
+                <div class="ColorBotonsDos">
+                <button type="button" class="boto">Aplica</button>
+                <button type="button" class="boto">Elimina</button>
+                <button type="button" class="boto">Actualitza</button>
+            </div>
+        </form>
+        </section>
+
+    </main>
+
+     <footer class="Footer">
+
+        <div class="footer-desktop">
+            <div class="footer-contacte">
+                <h2>Contacta amb nosaltres</h2>
+
+                 <form class="Formulari">
+                    <label for="nom">Nom i cognoms</label>
+                    <input id="nom" type="text" placeholder="Nom i cognoms">
+                    <label for="email">Correu electrònic</label>
+                    <input id="email" type="email" placeholder="Correu electrònic">                    
+                    <label for="missatge">Missatge</label>
+                    <textarea id="missatge" placeholder="Escriu el teu missatge"></textarea>
+                    <button type="submit" class="boto">Enviar</button>
+                </form>
+
+                <p class="footer-copy">Canvas & Code Festival</p>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Enllaços del footer">
+                    <ul>
+                        <li><a href="html/sobrenosaltres.html">Sobre nosaltres</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacte</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="footer-brand">
+                    <img src="../assets/img/logo.png" alt="Logo Canvas&Code" class="footer-logo">
+
+                    <div class="footer-socials">
+                         <a href="#"><img src="../assets/img/Facebook.png" alt="Facebook"></a>
+                         <a href="#"><img src="../assets/img/Instagram.png" alt="Instagram"></a>
+                         <a href="#"><img src="../assets/img/Twitter.png" alt="Twitter"></a>
+                        </div>
+                    </div>
+
+                </div>
+    </footer>
+</body>
+</html>

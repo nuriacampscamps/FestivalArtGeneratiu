@@ -1,0 +1,1270 @@
+/*IMPORTACIÓ DE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;700&display=swap');
+
+/*VARIABLES GLOBALS*/
+:root{
+    --color-black:#000;
+    --color-white:#fff;
+    --color-pink:#ef4f78;
+    --color-gray:#83827e;
+
+    --font-title: 'Orbitron', sans-serif;
+    --font-text: 'Inter', sans-serif;
+    --font-button: 'IBM Plex Mono', monospace;
+}
+
+/*ESTILS GENERALS*/
+body{
+    font-family:var(--font-text);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4{
+    font-family: var(--font-title);
+    font-weight: 400;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*HEADER I MENÚ*/
+.header{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    position: relative;
+
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    width: 60px;
+}
+
+.menuBoto{
+    width: 36px;
+    height: 28px;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menuBoto img {
+  width: 100%;
+  display: block;
+}
+
+.nav{
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: #000;
+    padding: 20px;
+    border: 1px solid #fff;
+    z-index: 1000;
+}
+
+.nav.open {
+  display: block;
+}
+
+.nav ul{
+    list-style: none;
+}
+.nav li{
+    margin-bottom: 16px;
+}
+
+.nav a{
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-button);
+}
+
+  .footer-Socials {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 22px;
+    font-size: 30px;
+    color: var(--color-white);
+  }
+
+
+
+/*CAPÇALERA*/
+.capçalera{
+    text-align: center;
+    padding: 45px 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/img/home-festival.png");
+
+}
+
+.TitolCapçalera{
+    width: 300px;
+    margin:0 auto 30px;
+}
+
+.capçalera h1{
+    color: var(--color-white);
+    font-size: 30px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.capçalera p{
+    color: var(--color-white);
+    margin-bottom: 32px;
+    font-size: 18px;
+}
+
+.fletxa{
+    display:none;
+}
+
+/*BOTONS*/
+.boto, .botoUn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    min-height: 42px;
+    background-color: var(--color-pink);
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: var(--font-button);
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px auto 0;
+    padding: 10px 14px;
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.boto:hover, .botoUn:hover{
+    background: linear-gradient(90deg, #5b9bd5 0%, #ef4f78 100%);
+}
+
+.boto:active, .botoUn:active{
+    background: #a33450;
+
+}
+
+.boto:disabled, .botoUn:disabled,
+.boto.disabled,
+.botoUn.disabled {
+    background-color: #83827e;
+    color: #d9d9d9;
+    cursor: not-allowed;
+}
+
+.BotonsIntroduccio,
+.BotonsEines,
+.ColorBotons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+/*SECCIONS GENERALS*/
+.section{
+    padding: 35px 25px;
+}
+
+.section h2{
+    text-align: center;
+    font-size: 20px;
+}
+
+.section p{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+.section img{
+    display:block;
+    margin:0 auto 24px;
+    margin-bottom: 5px;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.section-FormulariNegre,
+.seccioNegre {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding-bottom: 50px;
+}
+
+.seccioNegre {
+    margin-top: 39px;
+
+}
+
+/*PÀGINA INICI*/
+.introFestival{
+    padding: 30px 28px;
+    text-align: justify;
+    background-color: #ffffff;
+    padding: 14px 0px;
+    max-width: 760px;
+}
+
+#introFestival{
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+.BotonsIntroduccio{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.textExplora{
+    padding: 30px 28px;
+    text-align: center;
+    padding: 14px 28px;
+}
+
+.textExplora p{
+ font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+.innovacioValor{
+    margin-top: 30px;
+}
+.BotonsEines{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.ImatgesEines{
+    margin-top: 26px;
+}
+
+.imatgesFinal, .imatgesFinalDos{
+    margin-top: 30px;
+    flex-direction: column;
+    display: flex;
+}
+
+.imatgesFinal{
+    gap: 10px;
+}
+
+/*PÀGINA SOBRE NOSALTRES*/
+.sectionMissio{
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionMissio h2{
+    text-align: center;
+    font-size: 20px;
+}
+
+.sectionMissio img{
+    display:block;
+    margin:0 auto 24px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    width: 284px;
+
+}
+
+.ColorBotonsDos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px 40px 0px;
+}
+
+
+/*FORMULARIS I CAIXES DE TEXT*/
+.Formulari, .FormulariCodi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    width: 100%;
+}
+
+.Formulari{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 420px;
+    margin: 0 auto 48px;
+}
+
+.Formulari label{
+    width: 100%;
+    text-align: left;
+    font-family: var(--font-button);
+    font-size: 14px;
+}
+
+.Formulari input,
+.Formulari textarea,
+.CasellaEscriure textarea,
+.FormulariCodi textarea{
+    width: 100%;
+    background-color: transparent;
+    color: inherit;
+    border: 3px solid var(--color-gray);
+    border-radius: 16px;
+    padding: 14px 20px;
+    font-family: var(--font-button);
+    font-size: 18px;
+}
+
+.Formulari input,
+.Formulari textarea {
+    border-color: var(--color-gray);
+}
+
+.Formulari input:focus,
+.Formulari textarea:focus,
+.CasellaEscriure textarea:focus,
+.FormulariCodi textarea:focus {
+    border-color: var(--color-pink);
+    outline: none;
+}
+
+.Formulari input::placeholder,
+.Formulari textarea::placeholder,
+.CasellaEscriure textarea::placeholder,
+.FormulariCodi textarea::placeholder {
+    color:var(--color-gray);
+}
+
+/*CONTROLS EXPOSICIÓ*/
+.controls-section {
+  padding: 48px 24px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.controls-section h2, .code-section h2 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+
+.GrupControl {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+}
+
+.GrupControl label {
+  display: block;
+  font-family: var(--font-text);
+  font-size: 18px;
+  
+}
+
+.GrupControl input[type="range"] {
+  width: 100%;
+  max-width: 300px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+.GrupControl input[type="range"]::-webkit-slider-runnable-track {
+  height: 14px;
+  background-color: var(--color-gray);
+  border-radius: 10px;
+}
+
+.GrupControl input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 30%;
+    background-color: var(--color-pink);
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+.ColorBotons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+.modeBoto {
+  width: 150px;
+}
+
+.controladors{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/*MODIFICACIÓ AMB CODI*/
+.code-section {
+  padding: 48px 24px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.FormulariCodi textarea {
+  width: 90%;
+  margin: 20px;
+  max-width: 420px;
+  min-height: 180px;
+  
+
+}
+
+/*FOOTER*/
+.Footer{
+    background-color: #000;
+    color: #fff;
+    padding: 64px 24px;
+    text-align: center;
+}
+
+.footer-logo{
+    width:140px;
+    margin:0 auto 40px;
+}
+
+.Footer h2{
+    font-size: 28px;
+    margin-bottom: 32px;
+}
+
+.footer-nav ul{
+    list-style: none;
+}
+
+.footer-nav li{
+    margin-bottom: 18px;
+}
+
+.footer-nav a{
+    color:#fff;
+    text-decoration: none;
+    font-family: var(--font-button);
+    font-size: 15px;
+}
+
+.footer-nav a:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/*ACCESSIBILITAT*/
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--color-pink);
+  outline-offset: 4px;
+}
+
+.boto:focus,
+.botoUn:focus {
+  background-color: #85283f;
+  outline: none;
+}
+
+
+
+
+/*RESPONSIVE TABLET a partir de 768px*/
+@media (min-width: 768px) {
+
+  .topbar {
+    padding: 24px 48px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .capçalera {
+    padding: 80px 40px;
+  }
+
+  .TitolCapçalera {
+    width: 380px;
+  }
+
+  .section {
+    padding: 60px 80px;
+  }
+
+  .section p,
+  #introFestival,
+  .textExplora p {
+    text-align: justify;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+  }
+
+  .boto,
+  .botoUn {
+    width: 170px;
+  }
+
+  .BotonsIntroduccio,
+  .BotonsEines,
+  .ColorBotons {
+    gap: 16px;
+  }
+
+  .Footer {
+    padding: 35px 70px;
+  }
+
+  .footer-logo {
+    width: 170px;
+  }
+
+  .Footer h2 {
+    font-size: 34px;
+  }
+}
+
+/*CARROUSEL*/
+.carrusel{
+    position: relative;
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel-contingut{
+    text-align: center;
+
+}
+
+.fletxa{
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.fletxa-esquerra{
+    left: 50px;
+
+}
+
+.fletxa-dreta{
+    right: 50px;
+}
+
+.fletxa img{
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+
+/*RESPONSIVE ORDINADOR a partir de 1024px*/
+
+@media (min-width: 1024px) {
+
+  /* Header */
+
+  .topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+  }
+
+  .menuBoto {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    position: static;
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  .nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .nav li {
+    margin-bottom: 0;
+  }
+
+  /* Hero */
+
+  .capçalera {
+    padding: 120px 60px;
+  }
+
+  .TitolCapçalera {
+    width: 15em;
+  }
+
+  /* Seccions generals */
+
+  .section {
+    padding: 50px 110px;
+  }
+
+  .section p,
+  #introFestival,
+  .textExplora p {
+    max-width: 800px;
+  }
+
+  /* Botons */
+
+  .BotonsIntroduccio,
+  .BotonsEines,
+  .ColorBotons {
+    flex-direction: row;
+  }
+
+  /* Imatges en grup */
+
+  .imatgesFinal,
+  .imatgesFinalDos {
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .imatgesFinal img,
+  .imatgesFinalDos img {
+    width: 260px;
+  }
+
+  /* Controls exposició */
+
+  .GrupControl input[type="range"] {
+    max-width: 750px;
+  }
+
+  .FormulariCodi textarea {
+    max-width: 750px;
+    min-height: 300px;
+  }
+
+  /* Footer */
+
+  .Footer {
+    padding: 100px 80px;
+  }
+
+  .footer-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .footer-nav li {
+    margin-bottom: 0;
+  }
+
+.introSection{
+    max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 520px 420px;
+  align-items: center;
+  column-gap: 90px;
+
+}
+
+.introContingut{
+  width: 520px;
+}
+
+ .introSection h2 {
+        text-align: left;
+  font-size: 30px;
+  line-height: 1.2;
+
+    }
+
+    .introImatge {
+        width: 420px;
+  margin: 0;
+
+
+    }
+
+   
+
+    .BotonsIntroduccio .boto {
+        width: 160px;
+        min-height: 45px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .Eines{
+        margin: 0;
+        text-align: center;
+    }
+
+    .Eines h2 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.ImatgesEines {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+.eina-card {
+  width: 280px;
+  text-align: center;
+}
+
+.eina-card img {
+  width: 280px;
+  object-fit: cover;
+  margin: 0 auto 12px;
+}
+
+.eina-card p {
+font-weight: 500;
+  text-align: center;
+}
+
+.BotonsEines {
+  margin-top: 25px;
+}
+
+.exploraSection {
+  padding: 70px 80px;
+}
+
+.exploraSection h2 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.exploraContingut {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 520px;
+  justify-content: center;
+  align-items: center;
+}
+
+.exploraImatge {
+  width: 420px;
+  margin: 0 auto;
+}
+
+.exploraText{
+    width: 520px;
+}
+
+.exploraText p {
+  text-align: left;
+  line-height: 1.3;
+  margin-bottom: 35px;
+}
+
+.exploraText .BotonsIntroduccio {
+    display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 24px;
+
+}
+
+.exploraText .boto {
+  width: 180px;
+  min-height: 48px;
+  margin: 0;
+}
+
+.botoComunitat{
+            width: 160px;
+        min-height: 45px;
+
+}
+
+.valorSection{
+      padding: 70px 80px;
+
+}
+
+.valorsSection h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.valorsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.valorCard {
+  width: 300px;
+  text-align: center;
+}
+
+.valorCard img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto 20px;
+}
+
+.valorCard h3 {
+  font-family: var(--font-text);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.valorCard p {
+  line-height: 1.25;
+  text-align: center;
+}
+
+.equipSection {
+    padding: 70px 80px;
+}
+
+.equipSection h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.equipGrid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.equipCard {
+    width: 320px;
+    text-align: center;
+}
+
+.equipCard img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+}
+
+.equipCard h3 {
+    font-family: var(--font-text);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.equipCard p {
+    text-align: center;
+    line-height: 1.3;
+}
+
+.galeriaFinal {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: 300px 200px 200px;
+
+    gap: 0;
+
+    max-width: 1200px;
+
+    margin: 60px auto;
+}
+
+.galeriaFinal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ESQUERRA */
+
+.img1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.img3 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
+/* DRETA */
+
+.img2 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.img4 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.img5 {
+    grid-column: 2;
+    grid-row: 4;
+}
+.exposicioIntro {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+
+}
+
+.exposicioText {
+    width: 520px;
+
+}
+
+.exposicioText h2 {
+    text-align: left;
+    font-size: 30px;
+
+}
+
+.exposicioText p {
+     max-width: 520px;
+    margin: 0 0 30px 0;
+    text-align: justify;
+}
+
+.exposicioImatge {
+    width: 520px;
+    margin: 0;
+}
+.obresGrid {
+display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        padding: 50px 110px;
+}
+
+.obraCard {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.obraCard img {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    height: 290px;
+
+    object-fit: cover;
+}
+
+.obraCard .botoUn {
+
+    margin-top: 20px;
+
+    width: 220px;
+
+    text-align: center;
+}
+
+.recursosSection {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 80px;
+}
+
+.recursosSection h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.recursosGrid {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 40px;
+}
+
+.recursosGrid img {
+    width: 340px;
+    height: 280px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.recursosSection .BotonsIntroduccio {
+    justify-content: center;
+}
+
+.recursosSection .boto {
+    width: 160px;
+}
+
+#fotoHistoria{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.sectionHistoria h2{
+    font-size: 30px;
+}
+
+.sectionMissio h2{
+    font-size: 30px;
+}
+
+.sectionObra h2{
+    font-size: 30px;
+}
+
+.Comunitat{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Comunitat h2{
+    font-size: 30px;
+}
+
+.historiaContingut p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.QueExplicar h2{
+    font-size: 30px;
+}
+ .Footer {
+    padding: 60px 80px;
+  }
+
+  .footer-desktop {
+    max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.6fr 0.7fr;
+  align-items: center;
+  gap: 55px;
+  }
+
+  .footer-contacte {
+    text-align: left;
+  }
+
+  .footer-contacte h2 {
+    text-align: left;
+  font-size: 18px;
+  margin-bottom: 12px;
+  }
+
+  .Formulari {
+    max-width: 420px;
+  margin: 0 0 26px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  }
+
+  .Formulari label {
+    display: none;
+  }
+
+  .Formulari input {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+  .Formulari input:first-of-type {
+    grid-column: 1 / 2;
+  }
+
+  .Formulari input:nth-of-type(2) {
+    grid-column: 1 / 2;
+  }
+
+  .Formulari textarea {
+    grid-column: 1 / 3;
+  height: 58px;
+  min-height: 58px;
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+
+  }
+
+  .Formulari .boto {
+    grid-column: 2 / 3;
+  justify-self: end;
+
+  width: 90px;
+  min-height: 34px;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+
+  }
+
+  .footer-copy {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+  .footer-nav ul {
+    display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+
+  }
+
+  .footer-nav a {
+    font-size: 18px;
+  font-family: var(--font-text);
+
+  }
+
+  .footer-brand {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+
+  }
+
+  .footer-logo {
+    width: 150px;
+  margin: 0;
+
+  }
+
+
+  .fletxa-esquerra{
+    left: 80px;
+}
+
+.fletxa-dreta{
+    right: 80px;
+}
+
+.fletxa img{
+    width: 40px;
+}
+
+#TamanyImatgeFlux{
+    width: 77%;
+}
+
+.ColorBotonsDos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 120px;
+    padding: 0px 0px 40px 0px;
+}
+
+.fletxa {
+    display: block;
+}
+
+.capçalera h1{
+    font-size: 50px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
